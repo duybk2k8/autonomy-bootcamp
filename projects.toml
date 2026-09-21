@@ -1,4 +1,6 @@
 include_paths = [".github"]
+[projects.intro]
+path = "intro"
 
 [projects.camera]
 path = "camera"
