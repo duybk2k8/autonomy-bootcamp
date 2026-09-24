@@ -235,7 +235,6 @@ def test_east_north_coordinate_offset_m_north_non_zero_lat():
     assert east == pytest.approx(0.0, abs=1e-6)
     assert north == pytest.approx(111195.1, rel=1e-2)
     assert north < 200000.0
-
 #Quên nhân cos (họ nghĩ mỗi độ là khoảng cách như nhau, tuy nhiên mỗi độ ở gần cực lại gần hơn là xa cực => phải nhân cos)
 #bot chạy qua vì lần trc để cos 0 = 1 => như nhau nếu k có => phải để 60
 
@@ -260,7 +259,6 @@ def test_sort_clockwise_sweep_with_home():
    east = Coordinate(0, 1, 0)
    south = Coordinate(-1, 0, 0)
    west = Coordinate(0, -1, 0)
-
    home = Coordinate(0, 2, 0)
    result = sort_clockwise_sweep([east, north, west, south], home=home)
    assert result == [east, south, west, north]
